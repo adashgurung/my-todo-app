@@ -1,6 +1,6 @@
 #react-todo-functional
 
-A simple ToDo application built with React using only functional components. This exercise was intended to explore and learn more about React Hooks.
+A simple Todo application built with React using only functional components. This exercise was intended to explore and learn more about React Hooks.
 
 This project has CRUD functionality made to work with using Firebase (firestore database). Material-UI for the front-end design and hosted on Firebase.
 
