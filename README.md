@@ -2,8 +2,6 @@
 
 A simple todo application built with React using only functional components. This exercise was intended to explore and learn more about React Hooks.
 
-This project has CRUD functionality made to work with using Firebase (firestore database). Material-UI for the front-end design.
-
 ## Some notes about functional components in React
 
 Functional components are good for presentational components (components that are stateless are just UI elements)
