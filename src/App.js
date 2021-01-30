@@ -7,6 +7,7 @@ import { FormControl, InputLabel, Paper } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete"; */
 import db from "./firebase";
 import firebase from "firebase";
+import Quote from "./Quote";
 
 function getModalStyle() {
   const top = 50;
@@ -142,6 +143,7 @@ function App() {
         <div className="header">
           {/*   <h1>{username + "'s"} Todo List</h1> */}
           <h1>{username ? username + "'s" : ""} Todo List</h1>
+          <Quote />
         </div>
 
         <div className="input__section">

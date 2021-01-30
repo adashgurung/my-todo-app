@@ -4,7 +4,9 @@
 }
 .app {
   min-height: 100vh;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  /*   background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
+  background: linear-gradient(to right top, #ecc8af, #e7ad99);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +27,18 @@
   text-align: center;
   z-index: 2;
   backdrop-filter: blur(2rem);
-  overflow-y: scroll; /* prevent div from overflowing */
+  overflow: scroll; /* prevent div from overflowing */
+}
+
+/* Hide scrollbar for chrome, safari and opera */
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox*/
+.container {
+  -ms-overflow-style: none; /*IE  and Edge  */
+  scrollbar-width: none; /* Firefox */
 }
 
 .header {

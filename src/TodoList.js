@@ -101,23 +101,33 @@ const TodoList = ({ text }) => {
 
   return (
     <div className="todoList">
-      <Modal open={open} onClose={(e) => setOpen(false)}>
+      <Modal
+        className="edit__modal"
+        open={open}
+        onClose={(e) => setOpen(false)}
+      >
         <div style={modalStyle} className={classes.paper}>
-          <form>
-            <center>
-              <p>
+          <form className="todoList__form">
+            {/* <center> */}
+            {/*   <p>
                 <strong>Please update your todo</strong>
-              </p>
-              <Input
-                placeholder={text.todoF}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
+              </p> */}
+            <Input
+              placeholder={text.todoF}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
 
-              <Button onClick={update} type="submit" disabled={!input}>
-                edit
-              </Button>
-            </center>
+            <Button
+              onClick={update}
+              type="submit"
+              disabled={!input}
+              variant="contained"
+              color="secondary"
+            >
+              edit
+            </Button>
+            {/*   </center> */}
           </form>
         </div>
       </Modal>
@@ -130,6 +140,11 @@ const TodoList = ({ text }) => {
           </ListItemAvatar> */}
           <Checkbox />
           <ListItemText primary={text.todoF} secondary={text.timeF} />
+          {/*  <ListItemText
+            primary={text.todoF}
+            secondary={new Date(timestamp?.toDate()).toLocaleString()}
+          /> */}
+
           <IconButton>
             <EditIcon onClick={(e) => setOpen(true)} />
           </IconButton>
